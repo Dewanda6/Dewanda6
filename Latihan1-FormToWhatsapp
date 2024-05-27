@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Form to Whatsapp</title>
+</head>
+<body>
+    <div
+        class="max-w-xl w-full mx-auto text-center min-h-screen flex flex-col item-center justify-center">
+        <h1 class="text-2xl font-bold sm:text-3xl">Form to Whatsapp</h1>
+        <form 
+        action="#"
+        class="mx-auto mb-0 mt-8 max-w-md space-y-4"
+        onsubmit="sendMessageToWhatsapp()">
+            <input 
+                type="text"
+                class="w-full rounded-lg border borer-gray-300 p-4 pe-12 text-sm shadow-sm"
+                placeholder="Ketik nama anda"
+                id="nama"
+            />
+            <input 
+                type="text"
+                class="w-full rounded-lg borer-gray-200 p-4 pe-12 text-sm shadow-sm"
+                placeholder="Ketik pesan anda"
+                id="pesan"
+            />
+            <button 
+                type="submit"
+                class="inline-block rounded-lg bg-blue-500 px-5 py-3 text-sm font-medium text-white w-full"
+                >kirim pesan</button>
+        </form>
+    </div>
+    <script>
+        function sendMessageToWhatsapp() {
+            const urlToWhatsapp = `https://wa.me/6281906651197?text=halo,nama saya ${nama.value}, ${pesan.value}`;
+
+            window.open(urlToWhatsapp, "_blank");
+        }
+    </script>
+</body>
+</html>
